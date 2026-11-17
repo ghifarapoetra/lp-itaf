@@ -845,7 +845,7 @@
   <!-- SECTION 7: FORM PEMESANAN RESMI + BSI PAYMENT & UPSELL TO WHATSAPP    -->
   <!-- ===================================================================== -->
   <section id="offer-box" class="py-14 sm:py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="bg-gradient-to-br from-white via-sky-50/50 to-emerald-50/50 rounded-3xl border-2 border-itaf-blue shadow-soft overflow-hidden">
         <!-- Offer Header Strip -->
         <div class="bg-gradient-to-r from-itaf-navy via-itaf-blueDark to-itaf-blue text-white px-6 py-4 flex flex-wrap items-center justify-between gap-2">
@@ -858,7 +858,7 @@
           </span>
         </div>
 
-        <div class="p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="p-5 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8 items-start">
           <!-- Left Column: Offer, Free Ongkir Info & Rekening Resmi ITAF PRESS -->
           <div class="lg:col-span-5 space-y-5">
             <div>
@@ -938,7 +938,7 @@
             <form id="orderForm" onsubmit="submitOrderToWhatsApp(event)" class="space-y-4">
               <!-- Nama Customer -->
               <div>
-                <label for="custName" class="block text-xs font-bold text-slate-700 mb-1">
+                <label for="custName" class="block text-xs font-bold text-slate-700 mb-1.5">
                   Nama Customer <span class="text-rose-600">*</span>
                 </label>
                 <input
@@ -951,9 +951,9 @@
               </div>
 
               <!-- No Telepon & Email -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label for="custPhone" class="block text-xs font-bold text-slate-700 mb-1">
+                  <label for="custPhone" class="block text-xs font-bold text-slate-700 mb-1.5">
                     No Telepon / WhatsApp <span class="text-rose-600">*</span>
                   </label>
                   <input
@@ -965,7 +965,7 @@
                   />
                 </div>
                 <div>
-                  <label for="custEmail" class="block text-xs font-bold text-slate-700 mb-1">
+                  <label for="custEmail" class="block text-xs font-bold text-slate-700 mb-1.5">
                     Email <span class="text-slate-400 font-normal">(untuk resi/invoice)</span>
                   </label>
                   <input
@@ -974,10 +974,13 @@
                     placeholder="Contoh: nama@email.com"
                     class="w-full rounded-xl border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm text-itaf-navy placeholder:text-slate-400 focus:outline-none focus:border-itaf-blue focus:bg-white transition"
                   />
+                </div>
+              </div>
+
               <!-- Jumlah Buku Utama (Input Angka Khusus) + Wilayah Free Ongkir -->
-              <div class="grid grid-cols-1 sm:grid-cols-12 gap-3.5">
+              <div class="grid grid-cols-1 sm:grid-cols-12 gap-4">
                 <div class="sm:col-span-5">
-                  <label for="qtyInput" class="block text-xs font-bold text-slate-700 mb-1">
+                  <label for="qtyInput" class="block text-xs font-bold text-slate-700 mb-1.5">
                     Jumlah Buku (Eksemplar) <span class="text-rose-600">*</span>
                   </label>
                   <input
@@ -996,13 +999,13 @@
                 </div>
 
                 <div class="sm:col-span-7">
-                  <label for="wilayahSelect" class="block text-xs font-bold text-slate-700 mb-1">
+                  <label for="wilayahSelect" class="block text-xs font-bold text-slate-700 mb-1.5">
                     Wilayah Pengiriman <span class="text-rose-600">*</span>
                   </label>
                   <select
                     id="wilayahSelect"
                     onchange="updateOrderSummary()"
-                    class="w-full rounded-xl border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm font-semibold text-itaf-navy focus:outline-none focus:border-itaf-blue focus:bg-white transition"
+                    class="w-full rounded-xl border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm font-semibold text-itaf-navy focus:outline-none focus:border-itaf-blue focus:bg-white transition"
                   >
                     <option value="free_jawa_sumatera">Pulau Jawa &amp; Sumatera — FREE ONGKIR</option>
                     <option value="luar_jawa_sumatera">Luar Jawa &amp; Sumatera — Cek Ongkir di WA</option>
@@ -1011,8 +1014,8 @@
               </div>
 
               <!-- Optional Cross-Sell / Upsell Box (Buku ITAF Press Lainnya - Digabung 1 Ongkir) -->
-              <div class="rounded-2xl bg-sky-50/80 border border-sky-200 p-3.5">
-                <div class="flex items-center justify-between gap-2 mb-2">
+              <div class="rounded-2xl bg-sky-50/80 border border-sky-200 p-4">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
                   <span class="text-xs font-bold text-itaf-navy">
                     ➕ Tambah Buku ITAF Lainnya? <span class="text-itaf-blue font-semibold">(Opsional — Hemat 1x Kirim!)</span>
                   </span>
@@ -1020,63 +1023,63 @@
                     Cek Katalog ↗
                   </a>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                  <label class="flex items-center gap-2 bg-white px-3 py-2 rounded-xl border border-sky-100 cursor-pointer hover:border-itaf-blue transition">
-                    <input type="checkbox" class="upsell-book rounded text-itaf-blue" value="Buku Sukses Masuk LIPIA" onchange="updateOrderSummary()" />
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+                  <label class="flex items-center gap-2.5 bg-white px-3.5 py-2.5 rounded-xl border border-sky-100 cursor-pointer hover:border-itaf-blue transition">
+                    <input type="checkbox" class="upsell-book rounded text-itaf-blue shrink-0" value="Buku Sukses Masuk LIPIA" onchange="updateOrderSummary()" />
                     <span class="font-medium text-slate-700">Sukses Masuk LIPIA</span>
                   </label>
-                  <label class="flex items-center gap-2 bg-white px-3 py-2 rounded-xl border border-sky-100 cursor-pointer hover:border-itaf-blue transition">
-                    <input type="checkbox" class="upsell-book rounded text-itaf-blue" value="Panduan Kuliah Timur Tengah" onchange="updateOrderSummary()" />
+                  <label class="flex items-center gap-2.5 bg-white px-3.5 py-2.5 rounded-xl border border-sky-100 cursor-pointer hover:border-itaf-blue transition">
+                    <input type="checkbox" class="upsell-book rounded text-itaf-blue shrink-0" value="Panduan Kuliah Timur Tengah" onchange="updateOrderSummary()" />
                     <span class="font-medium text-slate-700">Panduan Kuliah Timteng</span>
                   </label>
-                  <label class="flex items-center gap-2 bg-white px-3 py-2 rounded-xl border border-sky-100 cursor-pointer hover:border-itaf-blue transition">
-                    <input type="checkbox" class="upsell-book rounded text-itaf-blue" value="Buku Persiapan TOAFL" onchange="updateOrderSummary()" />
+                  <label class="flex items-center gap-2.5 bg-white px-3.5 py-2.5 rounded-xl border border-sky-100 cursor-pointer hover:border-itaf-blue transition">
+                    <input type="checkbox" class="upsell-book rounded text-itaf-blue shrink-0" value="Buku Persiapan TOAFL" onchange="updateOrderSummary()" />
                     <span class="font-medium text-slate-700">Buku Persiapan TOAFL</span>
                   </label>
-                  <label class="flex items-center gap-2 bg-white px-3 py-2 rounded-xl border border-sky-100 cursor-pointer hover:border-itaf-blue transition">
-                    <input type="checkbox" class="upsell-book rounded text-itaf-blue" value="Judul Lain dari Katalog ITAF" onchange="updateOrderSummary()" />
+                  <label class="flex items-center gap-2.5 bg-white px-3.5 py-2.5 rounded-xl border border-sky-100 cursor-pointer hover:border-itaf-blue transition">
+                    <input type="checkbox" class="upsell-book rounded text-itaf-blue shrink-0" value="Judul Lain dari Katalog ITAF" onchange="updateOrderSummary()" />
                     <span class="font-medium text-slate-700">Judul Lain di Katalog</span>
                   </label>
                 </div>
               </div>
 
-              <!-- Alamat Lengkap & Kode Pos -->
-              <div class="grid grid-cols-1 sm:grid-cols-12 gap-3.5">
-                <div class="sm:col-span-8">
-                  <label for="custAddress" class="block text-xs font-bold text-slate-700 mb-1">
-                    Alamat Lengkap (Jalan, RT/RW, Desa/Kel, Kec, Kab/Kota) <span class="text-rose-600">*</span>
-                  </label>
-                  <textarea
-                    id="custAddress"
-                    required
-                    rows="2"
-                    placeholder="Contoh: Jl. Merdeka No. 12, RT 02/03, Kel. Sukamaju, Kec. Cibinong, Kab. Bogor, Jawa Barat"
-                    class="w-full rounded-xl border border-slate-300 bg-slate-50 px-3.5 py-2 text-sm text-itaf-navy placeholder:text-slate-400 focus:outline-none focus:border-itaf-blue focus:bg-white transition"
-                  ></textarea>
-                </div>
-                <div class="sm:col-span-4">
-                  <label for="custPostal" class="block text-xs font-bold text-slate-700 mb-1">
-                    Kode Pos <span class="text-rose-600">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="custPostal"
-                    required
-                    inputmode="numeric"
-                    maxlength="6"
-                    placeholder="Contoh: 16913"
-                    class="w-full rounded-xl border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm text-itaf-navy placeholder:text-slate-400 focus:outline-none focus:border-itaf-blue focus:bg-white transition"
-                  />
-                </div>
+              <!-- Alamat Lengkap (Dibuat Full-Width & Lega 3 Baris) -->
+              <div>
+                <label for="custAddress" class="block text-xs font-bold text-slate-700 mb-1.5">
+                  Alamat Lengkap (Jalan, No. Rumah, RT/RW, Desa/Kel, Kec, Kab/Kota, Provinsi) <span class="text-rose-600">*</span>
+                </label>
+                <textarea
+                  id="custAddress"
+                  required
+                  rows="3"
+                  placeholder="Contoh: Jl. Merdeka No. 12, RT 02 / RW 03, Kel. Sukamaju, Kec. Cibinong, Kab. Bogor, Jawa Barat"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50 px-4 py-3 text-sm text-itaf-navy leading-relaxed placeholder:text-slate-400 focus:outline-none focus:border-itaf-blue focus:bg-white transition"
+                ></textarea>
+              </div>
+
+              <!-- Kode Pos -->
+              <div class="sm:w-1/2">
+                <label for="custPostal" class="block text-xs font-bold text-slate-700 mb-1.5">
+                  Kode Pos <span class="text-rose-600">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="custPostal"
+                  required
+                  inputmode="numeric"
+                  maxlength="6"
+                  placeholder="Contoh: 16913"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50 px-3.5 py-2.5 text-sm text-itaf-navy placeholder:text-slate-400 focus:outline-none focus:border-itaf-blue focus:bg-white transition"
+                />
               </div>
 
               <!-- Live Order & Shipping Summary Box -->
-              <div id="shippingStatusBox" class="rounded-xl bg-emerald-50 border border-emerald-200 p-3.5 text-xs space-y-1">
-                <div class="flex justify-between items-center">
+              <div id="shippingStatusBox" class="rounded-xl bg-emerald-50 border border-emerald-200 p-4 text-xs space-y-1.5">
+                <div class="flex flex-wrap justify-between items-center gap-2">
                   <span class="text-slate-600">Status Ongkos Kirim:</span>
                   <span id="shippingBadgeText" class="font-extrabold text-emerald-700">FREE ONGKIR Jawa &amp; Sumatera (Rp 0)</span>
                 </div>
-                <div class="flex justify-between items-center pt-1 border-t border-emerald-200/70">
+                <div class="flex flex-wrap justify-between items-center gap-2 pt-1.5 border-t border-emerald-200/70">
                   <span class="font-bold text-itaf-navy">Estimasi Total Buku Utama:</span>
                   <span id="totalPriceText" class="font-heading font-extrabold text-base text-itaf-navy">Rp 220.000</span>
                 </div>
